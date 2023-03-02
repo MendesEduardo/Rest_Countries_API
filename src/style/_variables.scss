@@ -2,9 +2,9 @@
 
 $font-NunitoSans: Nunito Sans;
 
-$dark-blue: hsl(209, 23%, 22%);
-$very-dark-blue: hsl(207, 26%, 17%);
-$very-dark-blue-text: hsl(200, 15%, 8%);
-$dark-gray: hsl(0, 0%, 52%);
-$very-light-gray: hsl(0, 0%, 98%);
-$white: hsl(0, 0%, 100%);
+$dark-mode-elements: hsl(209, 23%, 22%);
+$dark-mode-background: hsl(207, 26%, 17%);
+$light-mode-text: hsl(200, 15%, 8%);
+$light-mode-input: hsl(0, 0%, 52%);
+$light-mode-background: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%); // Dark Mode Text & Light Mode Elements

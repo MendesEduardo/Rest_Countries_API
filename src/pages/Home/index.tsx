@@ -4,6 +4,8 @@ import { lightTheme, darkTheme } from '../../Themes';
 import FilterCountries from '../../components/FilterCountries';
 import SearchEngine from '../../components/SearchEngine'
 import { GlobalStyles } from '../../style/GlobalStyles';
+import CardCountries from '../../components/CardCountry';
+import Container from '../../components/Container';
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -11,10 +13,12 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>X-X</button>
-      <SearchEngine search={search} setSearch={setSearch} />
-      Hello world!
-      <FilterCountries />
+      <Container>
+        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>X-X</button>
+        <SearchEngine search={search} setSearch={setSearch} />
+        <FilterCountries />
+        <CardCountries search={search} />
+      </Container>
     </ThemeProvider>
   )
 }

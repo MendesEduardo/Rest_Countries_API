@@ -1,0 +1,14 @@
+@import "../../../style/variables";
+
+.cardCountries {
+    width: 300px;
+    img{
+        width: 300px;
+    }
+
+    &__initialDescription{
+        p{
+            font-size: 14px;
+        }
+    }
+}
