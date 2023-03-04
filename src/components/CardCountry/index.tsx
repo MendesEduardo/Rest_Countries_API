@@ -3,22 +3,29 @@ import countries from '../../data/data.json';
 import CardCountries from './CardCountries';
 
 interface Props {
-  search: string
+  search: string,
+  filter: string | null
 }
 
 export default function CardCountry(props: Props) {
   const [list, setList] = useState(countries);
-  const { search } = props;
+  const { search, filter } = props;
 
   const requestSearch = (name: string) => {
     const regex = new RegExp(search, 'i');
     return regex.test(name);
   }
 
+  const requestFilter = (id: string) => {
+    if (filter !== null)
+    return filter === id;
+    return true;
+  }
+
   useEffect(() => {
-    const novaLista = countries.filter(item => requestSearch(item.name));
+    const novaLista = countries.filter(item => requestSearch(item.name) && requestFilter(item.region));
     setList(novaLista);
-  }, [search]);
+  }, [search, filter]);
 
   return (
     <section>
