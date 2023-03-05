@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import countries from '../../data/data.json';
 import CardCountries from './CardCountries';
+import styles from './CardCountry.module.scss';
 
 interface Props {
   search: string,
@@ -18,7 +19,7 @@ export default function CardCountry(props: Props) {
 
   const requestFilter = (id: string) => {
     if (filter !== null)
-    return filter === id;
+      return filter === id;
     return true;
   }
 
@@ -28,7 +29,7 @@ export default function CardCountry(props: Props) {
   }, [search, filter]);
 
   return (
-    <section>
+    <section className={styles.cardCountry}>
       {list.map((item) => (
         <CardCountries
           key={item.alpha2Code}
