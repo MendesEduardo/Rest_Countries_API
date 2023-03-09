@@ -22,7 +22,6 @@ export default function FilterCountries({ filter, setFilter }: Props) {
         return setFilter(selec);
     }
 
-
     return (
         <button className={classNames({
                 [styles.filterCountries]: true,
@@ -30,7 +29,6 @@ export default function FilterCountries({ filter, setFilter }: Props) {
             })}
             onClick={() => setOpen(!open)}
             onBlur={() => setOpen(false)}>
-
             <span>{selectRegion || "Filter by region"}</span>
             {open ? (
                 <MdKeyboardArrowUp size={20} />
@@ -45,8 +43,7 @@ export default function FilterCountries({ filter, setFilter }: Props) {
                     <div
                         className={styles.filterCountries__option}
                         key={region}
-                        onClick={() => selectFilter(region)}
-                    >
+                        onClick={() => selectFilter(region)}>
                         {region}
                     </div>
                 ))}

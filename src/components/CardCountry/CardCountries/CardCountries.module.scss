@@ -1,19 +1,27 @@
 @import "../../../style/variables";
 
 .cardCountries {
-    width: 330px;
-    margin: 10px 0;
-    text-decoration: none;
-    border-radius: 4px;
-    color: gray;
-    
-    &__image{
-        border-radius: 4px 4px 0 0;
-    }
+  width: 310px;
+  height: auto;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px #000000;
 
-    &__initialDescription{
-        p, h4{
-            font-size: 14px;
-        }
+
+  &__initialDescription {
+    padding: 0 15px 15px 15px;
+
+    h4{
+      font-size: 18px;
+      font-weight: 800;
+      padding: 10px 0;
     }
+    p{
+      font-size: 14px;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
 }

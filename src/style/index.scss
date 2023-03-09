@@ -5,8 +5,6 @@
   line-height: 1.5;
   font-weight: 300;
 
-  background-color: $light-mode-background;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,10 +24,20 @@ body {
   margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
-  width: 1440px;
+  width: 1340px;
   font-family: $font-NunitoSans;
   font-size: 50px;
 }
 
 @media (width: 375px) {
+}
+
+.light {
+  background-color: $light-mode-background;
+  color: $light-mode-text;
+}
+
+.dark {
+  background-color: $dark-mode-background;
+  color: $white;
 }
