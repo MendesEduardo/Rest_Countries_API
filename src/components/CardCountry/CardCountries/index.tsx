@@ -8,18 +8,18 @@ type Props = typeof countries[0];
 
 export default function CardCountries(props: Props) {
   const { name, flags, population, region, capital } = props;
-  const themeContext = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Link
       to={`/${name}`}
-      className={`${styles.cardCountries} ${themeContext.theme}`}
+      className={`${styles.cardCountries} ${theme === 'light' ? '' : styles.themeCard}`}
     >
       <div className={styles.cardCountries__image}>
         <img
           src={flags.png}
           alt={name}
-          style={{ width: '310px', height: '200px', borderRadius: '4px 4px 0 0' }}
+          style={{ width: '270px', height: '150px', borderRadius: '4px 4px 0 0' }}
         />
       </div>
       <div className={styles.cardCountries__initialDescription}>

@@ -1,5 +1,6 @@
-import React from "react";
+import { useContext } from "react";
 import { GoSearch } from "react-icons/go";
+import { ThemeContext } from "../../Context/ThemeContext";
 import styles from "./SearchEngine.module.scss";
 
 interface SearchEngineProps {
@@ -8,9 +9,11 @@ interface SearchEngineProps {
 }
 
 export default function SearchEngine({ search, setSearch }: SearchEngineProps) {
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <div className={styles.searchEngine}>
-            <GoSearch size={25} color="#858585" />
+        <div className={`${styles.searchEngine} ${theme === 'light' ? '' : styles.themeInput}`}>
+            <GoSearch size={20} className={styles.searchEngine__icon} />
             <input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}

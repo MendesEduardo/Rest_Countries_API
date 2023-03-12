@@ -1,45 +1,54 @@
 @import "../../style/variables";
 
-.filterCountries{
-    align-items: center;
-    background-color: transparent;
-    display: flex;
-    font-size: 1rem;
-    font-weight: bold;
-    height: 40px;
-    justify-content: space-between;
-    min-width: 240px;
-    padding: 0 40px;
-    position: relative;
+.filterCountries {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  height: 40px;
+  justify-content: space-between;
+  min-width: 200px;
+  padding: 0 20px;
+  position: relative;
+  border: none;
+  color: $light-mode-text;
+
+  &__options {
+    display: none;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    top: 110%;
+    width: 100%;
+    border-radius: 4px;
+
     &--active {
-      background-color: blue;
-      color: white;
-    }
-    &__options {
-      display: none;
-      position: absolute;
-      left: 0;
-      flex-direction: column;
-      top: 100%;
-      width: 100%;
-      &--active {
-        display: flex;
-      }
-    }
-    &__option {
-      align-items: center;
-      background-color: transparent;
-      box-sizing: border-box;
-      color: black;
       display: flex;
-      height: 40px;
-      justify-content: center;
-      width: inherit;
-      &:hover,
-      &--active {
-        background-color: blue;
-        cursor: pointer;
-        color: white;
-      }
     }
   }
+
+  &__option {
+    background-color: $white;
+    align-items: center;
+    box-sizing: border-box;
+    color: inherit;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: inherit;
+
+    &:hover,
+    &--active {
+      background-color: $light-mode-input;
+      cursor: pointer;
+      color: $white;
+    }
+  }
+}
+
+.themeFilter {
+  background-color: $dark-mode-elements;
+  color: $white;
+}

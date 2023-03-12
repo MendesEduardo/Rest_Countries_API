@@ -7,7 +7,7 @@ type ThemeContextType = {
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: '',
-  setTheme: () => {},
+  setTheme: () => { },
 });
 
 type Props = {
@@ -15,11 +15,13 @@ type Props = {
 };
 
 export function ThemeProvider({ children }: Props) {
-  const [theme, setTheme] = useState<string>('');
+  const [theme, setTheme] = useState<string>('light');
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
+      <body className={theme}>
+        {children}
+      </body>
     </ThemeContext.Provider>
   );
 }

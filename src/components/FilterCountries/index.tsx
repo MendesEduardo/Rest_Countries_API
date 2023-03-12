@@ -1,8 +1,9 @@
 import classNames from 'classnames';
-import { useState } from "react";
+import { useState, useContext } from "react";
 import countries from '../../data/data.json';
 import styles from './FilterCountries.module.scss';
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
+import { ThemeContext } from '../../Context/ThemeContext';
 
 interface Props {
     filter: string | null;
@@ -13,6 +14,7 @@ export default function FilterCountries({ filter, setFilter }: Props) {
     const [open, setOpen] = useState(false);
     const allRegions = [...new Set(countries.map((item) => item.region))];
     const selectRegion = filter && allRegions.find(region => region === filter);
+    const { theme } = useContext(ThemeContext);
 
     type nameCoutries = typeof allRegions[0];
 
@@ -24,9 +26,10 @@ export default function FilterCountries({ filter, setFilter }: Props) {
 
     return (
         <button className={classNames({
-                [styles.filterCountries]: true,
-                [styles["filterCountries__ordenador--active"]]: filter !== ""
-            })}
+            [styles.filterCountries]: true,
+            [styles["themeFilter"]]: theme === 'light' ? '' : 'dark',
+            [styles["filterCountries__ordenador--active"]]: filter !== ""
+        })}
             onClick={() => setOpen(!open)}
             onBlur={() => setOpen(false)}>
             <span>{selectRegion || "Filter by region"}</span>
@@ -41,7 +44,10 @@ export default function FilterCountries({ filter, setFilter }: Props) {
             })}>
                 {allRegions.map((region) => (
                     <div
-                        className={styles.filterCountries__option}
+                        className={classNames({
+                            [styles.filterCountries__option]: true,
+                            [styles["themeFilter"]]: theme === 'light' ? '' : 'dark',
+                        })}
                         key={region}
                         onClick={() => selectFilter(region)}>
                         {region}

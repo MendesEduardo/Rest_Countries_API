@@ -1,27 +1,33 @@
 @import "../../../style/variables";
 
 .cardCountries {
-  width: 310px;
-  height: auto;
+  width: 270px;
+  height: 310px;
   margin: 10px 0;
   text-decoration: none;
   border-radius: 4px;
-  box-shadow: 2px 2px 5px #000000;
-
+  background-color: $white;
+  color: $light-mode-text;
+  box-shadow: 0px 0px 2px #00000067;
 
   &__initialDescription {
     padding: 0 15px 15px 15px;
 
-    h4{
+    h4 {
       font-size: 18px;
       font-weight: 800;
       padding: 10px 0;
     }
-    p{
+    p {
       font-size: 14px;
-      span{
+      span {
         font-weight: bold;
       }
     }
   }
+}
+
+.themeCard {
+  background-color: $dark-mode-elements;
+  color: $white;
 }
