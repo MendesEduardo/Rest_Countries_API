@@ -2,7 +2,8 @@
 
 .cardCountries {
   width: 270px;
-  height: 310px;
+  min-height: 310px;
+  height: auto;
   margin: 10px 0;
   text-decoration: none;
   border-radius: 4px;

@@ -34,3 +34,9 @@
     color: $white;
   }
 }
+
+@media (max-width: 375px){
+  .searchEngine{
+    width: 95%;
+  }
+}

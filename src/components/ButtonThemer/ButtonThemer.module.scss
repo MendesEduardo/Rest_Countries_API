@@ -1,0 +1,13 @@
+.buttonThemer{
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    &:hover{
+        cursor: pointer;
+    }
+}

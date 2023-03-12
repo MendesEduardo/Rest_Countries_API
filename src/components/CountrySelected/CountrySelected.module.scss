@@ -1,0 +1,57 @@
+.countrySelected {
+  padding: 1em 45px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+
+  h3 {
+    padding-left: 2em;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  img {
+    width: 500px;
+    height: 350px;
+    box-shadow: 0px 0px 8px #00000067;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    ul {
+      padding: 55px 50px 0 0;
+      li {
+        list-style: none;
+        font-size: 12px;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__bordeCountries {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+      margin: 0 20px 0 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    button {
+      margin: 2px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .countrySelected {
+    img {
+      width: 300px;
+    }
+  }
+}

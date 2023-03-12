@@ -8,3 +8,11 @@
     gap: 8em;
   }
 }
+
+@media (max-width: 375px){
+  .home{
+    &__seekers{
+      display: block;
+    }
+  }
+}

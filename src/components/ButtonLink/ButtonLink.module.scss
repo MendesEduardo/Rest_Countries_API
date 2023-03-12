@@ -1,0 +1,35 @@
+@import "../../style/variables";
+
+.buttonLink {
+  margin: 0 45px;
+  padding: 0.5em 1em;
+  background-color: $white;
+  border: none;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0px 0px 4px #00000067;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $light-mode-input;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: inherit;
+  }
+}
+
+.themeButtonLink {
+  background-color: $dark-mode-elements;
+  color: $white;
+}
+
+@media (max-width: 375px){
+  .buttonLink{
+    margin: 10px;
+  }
+}

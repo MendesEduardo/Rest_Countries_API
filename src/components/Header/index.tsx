@@ -7,9 +7,9 @@ import { useContext } from 'react';
 export default function Header() {
   const { theme } = useContext(ThemeContext);
   return (
-    <section className={theme === 'light' ? 'light' : 'dark'}>
+    <section className={`${styles.innerHeader} ${theme === 'light' ? '' : styles.themeHeaderDark}`}>
       <Container>
-        <header className={styles.header}>
+        <header>
           <h1>Where in the world?</h1>
           <ButtonThemer />
         </header>
