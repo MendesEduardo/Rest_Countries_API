@@ -25,6 +25,7 @@ body {
   width: 100%;
   font-family: $font-NunitoSans;
   font-size: 50px;
+  overflow-x: hidden;
 }
 
 @media (width: 375px) {

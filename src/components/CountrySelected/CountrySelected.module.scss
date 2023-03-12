@@ -50,8 +50,30 @@
 
 @media (max-width: 375px) {
   .countrySelected {
+    display: block;
+    padding: 25px;
+
+    h3{
+      padding: 0;
+      font-size: 18px;
+    }
+
+    &__description {
+      flex-direction: column;
+      ul{
+        padding: 10px 0;
+      }
+    }
     img {
       width: 300px;
+      height: 200px;
+    }
+    &__bordeCountries {
+      display: block;
+      padding: 15px 0 ;
+      button{
+        margin: 5px 2px;
+      }
     }
   }
 }
